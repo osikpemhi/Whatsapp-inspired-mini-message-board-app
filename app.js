@@ -2,7 +2,7 @@ const { log } = require('console');
 const express = require('express');
 const app = express();
 const path = require('path');
-
+const port = 3000 || process.env.PORT
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -46,6 +46,6 @@ app.post('/new', (req, res) => {
 });
 
 // 4. SERVER START
-app.listen(3000, () => {
+app.listen(port , () => {
   console.log('server running on port 3000...');
 });
