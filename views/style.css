@@ -187,14 +187,19 @@ body {
     gap: 8px;
   }
 
-  .message-form form {
-    gap: 8px;
-  }
+/* Allow the inner form to flex and shrink on small screens to prevent overflow */
+.message-form form {
+  display: flex;
+  flex: 1 1 auto;
+  gap: 10px;
+  align-items: center;
+  min-width: 0; /* critical: lets flex children (inputs) shrink below their intrinsic min-width */
+}
 
-  .message-form input[type="text"] {
-    padding: 8px 10px;
-    font-size: 13px;
-  }
+.message-form input[type="text"] {
+  /* ...existing rules... */
+  min-width: 0; /* allow inputs to shrink inside flex containers */
+}
 
   .sendMessage {
     width: 36px;
