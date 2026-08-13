@@ -1,0 +1,143 @@
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #111b21;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Chat Container Card */
+.container {
+  width: 100%;
+  max-width: 500px;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #0b141a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Message Feed Area */
+.messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-image: radial-gradient(#202c33 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+/* Individual Message Bubble */
+.message {
+  align-self: flex-start;
+  background-color: #202c33;
+  color: #e9edef;
+  padding: 8px 12px 10px 12px;
+  border-radius: 0px 8px 8px 8px;
+  max-width: 75%;
+  position: relative;
+  word-wrap: break-word;
+  box-shadow: 0 1px 0.5px rgba(11, 20, 26, 0.13);
+}
+
+/* Sender Name */
+.message-heading {
+  font-size: 12px;
+  font-weight: 600;
+  color: #53bdeb;
+  margin-bottom: 4px;
+}
+
+/* Message Text */
+.message-text {
+  font-size: 14.5px;
+  line-height: 19px;
+  color: #e9edef;
+}
+
+/* Bottom Input Area */
+.message-form {
+  background-color: #202c33;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+}
+
+.message-form form {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Text Inputs */
+.message-form input[type="text"] {
+  background-color: #2a3942;
+  border: none;
+  outline: none;
+  color: #d1d7db;
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* User Name Input*/
+.message-form input[name="userName"] {
+  flex: 1;
+}
+
+/* Message Input */
+.message-form input[name="messageText"] {
+  flex: 2;
+}
+
+.message-form input::placeholder {
+  color: #8696a0;
+}
+
+/* Send Button */
+.sendMessage {
+  background-color: #00a884; 
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.sendMessage:hover {
+  background-color: #008f70;
+}
+
+.sendMessage:active {
+  transform: scale(0.95);
+}
+
+/* Custom Scrollbar for messages */
+.messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.16);
+  border-radius: 3px;
+}

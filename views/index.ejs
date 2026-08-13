@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's up | Message board app</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="messages">
+
+      <% messages.forEach((msg)=> { %>
+        <div class="message">
+          <div class="message-heading">
+            <%= msg.user %>
+          </div>
+          <div class="message-text">
+            <%= msg.text %>
+          </div>
+        </div>
+
+        <% }); %>
+
+    </div>
+    <div class="message-form">
+      <form action="/new" method="post">
+        <input type="text" name="userName">
+        <input type="text" name="messageText">
+        <button type="submit" class="sendMessage">
+          ✈
+        </button>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
