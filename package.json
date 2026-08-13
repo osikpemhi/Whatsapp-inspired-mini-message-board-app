@@ -1,6 +1,18 @@
 {
+  "name": "whatsapp-inspired-message-board",
+  "version": "1.0.0",
+  "description": "A small WhatsApp-inspired mini message board app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
     "ejs": "^6.0.1",
     "express": "^5.2.1"
-  }
+  },
+  "license": "MIT"
 }
