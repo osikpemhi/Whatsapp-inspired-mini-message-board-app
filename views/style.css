@@ -122,6 +122,7 @@ body {
   align-items: center;
   font-size: 16px;
   transition: background-color 0.2s ease, transform 0.1s ease;
+  flex-shrink: 0;
 }
 
 .sendMessage:hover {
@@ -140,4 +141,119 @@ body {
 .messages::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.16);
   border-radius: 3px;
+}
+
+/* ===== Mobile Responsiveness ===== */
+
+/* Small phones (320px - 480px) */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    max-width: 100%;
+    height: 90vh;
+    border-radius: 8px;
+  }
+
+  .messages {
+    padding: 15px;
+    gap: 10px;
+    background-size: 18px 18px;
+  }
+
+  .message {
+    max-width: 85%;
+    padding: 6px 10px 8px 10px;
+    border-radius: 0px 6px 6px 6px;
+  }
+
+  .message-heading {
+    font-size: 11px;
+    margin-bottom: 2px;
+  }
+
+  .message-text {
+    font-size: 13.5px;
+    line-height: 18px;
+  }
+
+  .message-form {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .message-form form {
+    gap: 8px;
+  }
+
+  .message-form input[type="text"] {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .sendMessage {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+}
+
+/* Medium phones (481px - 768px) */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  .container {
+    max-width: 100%;
+    height: 88vh;
+  }
+
+  .messages {
+    padding: 18px;
+  }
+
+  .message {
+    max-width: 80%;
+  }
+
+  .message-heading {
+    font-size: 11.5px;
+  }
+
+  .message-text {
+    font-size: 14px;
+  }
+
+  .message-form {
+    padding: 10px 14px;
+  }
+
+  .message-form input[type="text"] {
+    padding: 8px 11px;
+    font-size: 13px;
+  }
+
+  .sendMessage {
+    width: 38px;
+    height: 38px;
+    font-size: 15px;
+  }
+}
+
+/* Large phones in landscape (769px and above, but still mobile) */
+@media (max-width: 1024px) and (orientation: landscape) {
+  .container {
+    height: 95vh;
+  }
+
+  .messages {
+    padding: 15px;
+  }
+
+  .message-form {
+    padding: 8px 12px;
+  }
 }
