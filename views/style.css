@@ -76,11 +76,13 @@ body {
   align-items: center;
 }
 
+/* Allow the inner form to flex and shrink on small screens to prevent overflow */
 .message-form form {
   display: flex;
-  width: 100%;
+  flex: 1 1 auto;
   gap: 10px;
   align-items: center;
+  min-width: 0; /* critical: lets flex children (inputs) shrink below their intrinsic min-width */
 }
 
 /* Text Inputs */
@@ -92,6 +94,7 @@ body {
   padding: 9px 12px;
   border-radius: 8px;
   font-size: 14px;
+  min-width: 0; /* allow inputs to shrink inside flex containers */
 }
 
 /* User Name Input*/
